@@ -1,0 +1,122 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.due@gmail.com"
+    }
+  ],
+  "tatuajes": [
+    {
+      "id": "tatuaje-ave",
+      "title": "Ave en libertad",
+      "description": "Ave en su camino a la libertad.",
+      "price": 350,
+      "details": {
+        "size": "Mediano",
+        "color": "Blanco y negro",
+        "style": "Estilo tradicional b/n"
+      }
+    },
+    {
+      "id": "tatuaje-dragon",
+      "title": "Dragón japones",
+      "description": "Dragón tradicional japones representativo.",
+      "price": 600,
+      "details": {
+        "size": "Pequeño",
+        "color": "Negro, rojo y azul",
+        "style": "Acuarela"
+      }
+    },
+    {
+      "id": "tatuaje-duende",
+      "title": "Duende volador",
+      "description": "Duende en un cuento de hadas.",
+      "price": 350,
+      "details": {
+        "size": "Mediano",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-gatoninja",
+      "title": "Gato ninja",
+      "description": "Gato ninja en su prime.",
+      "price": 550,
+      "details": {
+        "size": "Mediano",
+        "color": "Blanco y negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-kakashikurama",
+      "title": "Kakashi y Kurama",
+      "description": "Kakashi protejiendo a kurama bébe.",
+      "price": 750,
+      "details": {
+        "size": "Mediano",
+        "color": "Blanco, negro, rojo y naranja",
+        "style": "Acuarela"
+      },
+      "image": "../src/assets/tattoos/tattoos-kakashi.jpg"
+    },
+    {
+      "id": "tatuaje-mandala",
+      "title": "Mandalas",
+      "description": "Patron de mandalas.",
+      "price": 550,
+      "details": {
+        "size": "Grande",
+        "color": "Negro",
+        "style": "Acuarela"
+      }
+    },
+    {
+      "id": "tatuaje-padrehija",
+      "title": "Padre e hija",
+      "description": "Padre e hija juntos.",
+      "price": 400,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-pato",
+      "title": "Pato feliz",
+      "description": "Pato en su prime.",
+      "price": 400,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-rosas",
+      "title": "Rosas",
+      "description": "Cadena de rosas bonitas.",
+      "price": 900,
+      "details": {
+        "size": "Grande",
+        "color": "Colorido",
+        "style": "Acuarela"
+      }
+    },
+    {
+      "id": "tatuaje-sol",
+      "title": "Sol triste",
+      "description": "Sol en un mundo triste.",
+      "price": 400,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    }
+  ]
+}

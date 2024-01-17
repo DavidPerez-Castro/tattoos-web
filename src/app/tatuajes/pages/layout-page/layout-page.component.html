@@ -1,0 +1,59 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="push" [ngStyle]="{ width: '250px' }">
+    <mat-toolbar>
+      <span>Menú</span>
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <mat-list-item
+        *ngFor="let item of sidebarItems"
+        [routerLink]="item.url"
+        (click)="sidenav.toggle()"
+      >
+        <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+        {{ item.label }}
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="spacer">
+      <a mat-button href="./tatuajes/home">
+        Skin Tattoos
+      </a>
+    </span>
+    <span class="example-spacer" style="flex: 1 1 auto;"></span>
+    <button mat-button>
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <div class="container p-2">
+    <router-outlet></router-outlet>
+  </div>
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row class="flex justify-content-center">
+      <span>
+        <mat-icon>copyright</mat-icon>
+        2024, Tato Piel
+      </span>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row class="flex justify-content-center">
+      <span>Términos</span>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row class="flex justify-content-center">
+      <span>Aviso de Privacidad</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</mat-sidenav-container>

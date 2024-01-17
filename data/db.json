@@ -1,0 +1,121 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.due@gmail.com"
+    }
+  ],
+  "tatuajes": [
+    {
+      "id": "tatuaje-ave",
+      "title": "Ave simbolo de la libertad",
+      "description": "Tatuaje de ave puede simbolizar la libertad, la transcendencia, la espiritualidad, la conexión con la naturaleza o incluso la superación de desafíos.",
+      "price": 350,
+      "details": {
+        "size": "Mediano",
+        "color": "Blanco y negro",
+        "style": "Estilo tradicional b/n"
+      }
+    },
+    {
+      "id": "tatuaje-dragon",
+      "title": "Dragón japones",
+      "description": "Un dragón japonés es una criatura mítica y legendaria que forma parte importante de la mitología y la cultura japonesa. Los dragones japoneses suelen representarse como criaturas alargadas y serpentinas, con cabezas más parecidas a las de un caballo o un ciervo, adornadas con cuernos, y a menudo con bigotes largos.",
+      "price": 600,
+      "details": {
+        "size": "Pequeño",
+        "color": "Negro, rojo y azul",
+        "style": "Acuarela"
+      }
+    },
+    {
+      "id": "tatuaje-tigre",
+      "title": "Tigre",
+      "description": "Los tigres son criaturas majestuosas y poderosas que han sido simbolizadas en diversas culturas como símbolos de coraje y poder.",
+      "price": 350,
+      "details": {
+        "size": "Mediano",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-gatoninja",
+      "title": "Gato ninja",
+      "description": "El gato, siendo ágil y silencioso, puede simbolizar la astucia y la agilidad del ninja, mientras que el concepto de gato ninja en sí mismo puede transmitir una sensación de misterio, habilidad y versatilidad.",
+      "price": 550,
+      "details": {
+        "size": "Mediano",
+        "color": "Blanco y negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-corazon",
+      "title": "Amor pintado",
+      "description": "Representa los sentimientos en una cadena de ramas en corazón, expresando tus sentimientos.",
+      "price": 750,
+      "details": {
+        "size": "Mediano",
+        "color": "Blanco, negro, rojo y naranja",
+        "style": "Acuarela"
+      }
+    },
+    {
+      "id": "tatuaje-mandala",
+      "title": "Mandalas",
+      "description": "Los tatuajes de mandalas son diseños circulares elaborados que tienen sus raíces en la espiritualidad y la cultura oriental, especialmente en el hinduismo y el budismo. Estos patrones intrincados consisten en formas geométricas, líneas y símbolos que convergen hacia el centro del círculo.",
+      "price": 550,
+      "details": {
+        "size": "Grande",
+        "color": "Negro",
+        "style": "Acuarela"
+      }
+    },
+    {
+      "id": "tatuaje-padrehija",
+      "title": "Padre e hija",
+      "description": "Un tatuaje de padre e hija es un diseño que simboliza el vínculo especial y el amor incondicional entre un padre y su hija. Estos tatuajes suelen representar una conexión emocional profunda y duradera.",
+      "price": 400,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-pato",
+      "title": "Pato feliz",
+      "description": "Libertad: La habilidad de los patos para volar y nadar libremente puede simbolizar la libertad y la independencia.",
+      "price": 400,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-rosas",
+      "title": "Rosas",
+      "description": "Las rosas son flores que han sido admiradas a lo largo de la historia y se asocian con una amplia gama de significados.",
+      "price": 900,
+      "details": {
+        "size": "Grande",
+        "color": "Colorido",
+        "style": "Acuarela"
+      }
+    },
+    {
+      "id": "tatuaje-sol",
+      "title": "Sol",
+      "description": "Un tatuaje de sol es un diseño que simboliza la vida, la energía, la vitalidad y la renovación. Es un motivo popular en diferentes culturas y se presta a una amplia gama de interpretaciones y estilos artísticos.",
+      "price": 400,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    }
+  ]
+}

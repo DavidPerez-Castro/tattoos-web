@@ -1,0 +1,19 @@
+<section class="sec-products max-w-full py-0 px-2 md:px-0 md:py-0 m-0 m-auto">
+  <h1 class="txt-title text-center">Tatuajes</h1>
+  <mat-divider></mat-divider>
+
+  <div class="tattoo-product grid bm-8 pt-2">
+
+    <div *ngFor="let tato of tatuajes"
+      class="tattoo-card col-12 sm:col-4 md:col-3 ">
+      <tatuajes-tato-card [tato]="tato"></tatuajes-tato-card>
+    </div>
+
+  </div>
+
+</section>
+<!--<ul>
+  <li *ngFor="let tato of tatuajes">
+    {{ tato.title }}
+  </li>
+</ul>-->
