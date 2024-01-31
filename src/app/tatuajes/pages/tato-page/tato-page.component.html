@@ -7,36 +7,53 @@
   </mat-grid-list>
 </ng-template>
 
-<section *ngIf="tato; else divLoading" class="sec-details-products max-w-full py-0 px-2 md:px-0 md:py-0 m-0 m-auto">
-  <div class="first-div flex flex-wrap md:flex-wrap justify-content-center justify-content-around h-full md:h-auto mb-3">
-    <mat-card class="image-tato w-full xl:w-5 h-full md:h-auto mb-3">
-      <mat-card-header>
-        <mat-card-title>{{ tato.title }}</mat-card-title>
-        <mat-card-subtitle>${{ tato.price }}</mat-card-subtitle>
-      </mat-card-header>
-      <div class="card-image-container">
-        <img [src]="tato | tatoImage" [alt]="tato.title" class="card-image " style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-    </mat-card>
-
-    <mat-card class="details-tato w-full xl:w-5 h-full md:h-auto mb-3">
-      <mat-card-header>
-        <mat-card-title>Información</mat-card-title>
-        <mat-card-subtitle>{{ tato.title }}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <mat-list>
-          <mat-list-item> ${{ tato.price }}</mat-list-item>
-          <mat-list-item>{{ tato.description }}</mat-list-item>
-        </mat-list>
-        <button
-          mat-button
-          color="warn"
-          (click)="goBack()"
-        >
-          Regresar
-        </button>
-      </mat-card-content>
-    </mat-card>
+<div *ngIf="tato; else divLoading" class="grid justify-content-center mb-3 p-2">
+  <div class="col-12 md:col-5 lg:col-3 xl:h-screen md:h-30rem mb-2">
+    <img [src]="tato | tatoImage" [alt]="tato.title" class="card-image border-round-sm" style="width: 100%; height: 100%; object-fit: cover;">
   </div>
-</section>
+
+  <mat-card class="col-12 md:col-6 lg:col-4 xl:h-screen md:h-30rem flex flex-column mr-2 ml-2 mb-2">
+    <mat-card-header class="grid">
+      <mat-card-title class="col-12 text-2xl md:text-3xl xl:text-4xl">{{ tato.title }}</mat-card-title>
+      <p class="col-12">5 estrellas</p>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="text-2xl"> ${{ tato.price }}</p>
+      <p class="text-base">{{ tato.description }}</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="col-12 md:col-6 lg:col-4 xl:h-screen md:h-20rem">
+    <mat-card-header class="mb-2">
+      <mat-card-subtitle class="text-white text-3xl">Stock Disponible</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="mb-2">
+      <p class="text-xl mb-3">Cantidad:</p>
+      <div class="grid justify-content-center w-13rem gap-1">
+        <button mat-stroked-button (click)="decrementarCantidad()">
+          <mat-icon>remove</mat-icon>
+        </button>
+        <button mat-stroked-button class="border-round-sm">
+          {{ cantidad }}
+        </button>
+        <button mat-stroked-button (click)="incrementarCantidad()">
+          <mat-icon>plus_one</mat-icon>
+        </button>
+        <!--<button (click)="agregarAlCarrito()">Agregar al carrito</button>-->
+      </div>
+    </mat-card-content>
+    <mat-card-actions class="grid flex-column mt-2 gap-2">
+      <button mat-flat-button color="primary" class="w-20rem">
+        Comprar
+      </button>
+      <button mat-flat-button color="accent" class="w-20rem">
+        Agregar al carrito
+      </button>
+      <!--<button mat-flat-button color="warn" class="w-20rem"
+        (click)="goBack()"
+      >
+      Regresar
+      </button>-->
+    </mat-card-actions>
+  </mat-card>
+</div>

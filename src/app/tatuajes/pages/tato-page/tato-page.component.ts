@@ -34,7 +34,19 @@ export class TatoPageComponent implements OnInit {
     })
   }
 
-  goBack():void {
+  /*goBack():void {
     this.router.navigateByUrl('tatuajes/product')
+  }*/
+
+  cantidad: number = 1;
+
+  incrementarCantidad() {
+    this.cantidad++;
+  }
+
+  decrementarCantidad() {
+    if (this.cantidad > 1) {
+      this.cantidad--;
+    }
   }
 }

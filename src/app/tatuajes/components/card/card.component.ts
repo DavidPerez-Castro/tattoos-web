@@ -4,7 +4,7 @@ import { Tato } from '../../interfaces/tato.interface';
 @Component({
   selector: 'tatuajes-tato-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css'],
+
 })
 
 export class CardComponent implements OnInit {
@@ -12,7 +12,7 @@ export class CardComponent implements OnInit {
   //constructor() { }
 
   @Input()
-  public tato!: Tato;
+  public tato: Tato | undefined;
 
   ngOnInit(): void {
     if (!this.tato) throw Error('Tato property is required');

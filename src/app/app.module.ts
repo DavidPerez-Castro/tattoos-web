@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
+import { TatuajesService } from './tatuajes/services/tatuajes.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
 
   ],
-  providers: [],
+  providers: [TatuajesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

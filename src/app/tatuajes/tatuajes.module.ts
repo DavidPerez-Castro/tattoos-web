@@ -13,6 +13,10 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { CardComponent } from './components/card/card.component';
 import { TatoImagePipe } from './pipes/tato-image.pipe';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { SearchPageComponent } from './pages/search-page/search-page.component';
+import { CardImgComponent } from './components/card-img/card-img.component';
+import { FooterPageComponent } from './pages/footer-page/footer-page.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   imports: [
@@ -30,6 +34,10 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
     AboutPageComponent,
     ContactPageComponent,
     CardComponent,
+    SearchPageComponent,
+    CardImgComponent,
+    FooterPageComponent,
+    SearchComponent,
 
     // Pipes
     TatoImagePipe,

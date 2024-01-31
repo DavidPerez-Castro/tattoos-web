@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Tato } from '../../interfaces/tato.interface';
 
 @Component({
   selector: 'app-layout-page',
@@ -11,6 +13,7 @@ export class LayoutPageComponent {
     { label: 'Productos', icon: 'category', url: './product' },
     { label: 'Sobre nosotros', icon: 'info', url: './about' },
     { label: 'Contacto', icon: 'contacts_product', url: './contact' },
+    //{ label: 'Buscar', icon: 'search', url: './search' },
   ]
 
 }

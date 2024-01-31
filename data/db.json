@@ -116,6 +116,116 @@
         "color": "Negro",
         "style": "Estilo mexicano tradicional"
       }
+    },
+    {
+      "id": "tatuaje-corazon-alas-angel",
+      "title": "Corazon con alas de ángel",
+      "description": "Corazón con alas de ángel, una corona de espinas, una llave y un fondo de cielo y nubes.",
+      "price": 1500,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-buho",
+      "title": "Búho",
+      "description": "Búho con plumas marrones, ojos azules, un sombrero de copa y un fondo de luna y estrellas.",
+      "price": 999,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-flor-loto",
+      "title": "Flor de loto",
+      "description": "Flor de loto con pétalos rosados, un centro amarillo y un fondo de agua y hojas verdes.",
+      "price": 1000,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-lobo",
+      "title": "Lobo",
+      "description": "Lobo aullando a la luna en el brazo. Este tatuaje simboliza la fuerza, la libertad y la conexión con la naturaleza.",
+      "price": 1699,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-pluma-ave",
+      "title": "Pluma ave",
+      "description": "Una pluma con un pájaro volando en la muñeca. Este tatuaje significa la ligereza, la creatividad y el deseo de volar.",
+      "price": 1500,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-mariposa",
+      "title": "Mariposa",
+      "description": "Mariposa multicolor en la mano. Este tatuaje representa la transformación, la belleza y la alegría.",
+      "price": 3000,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-dos-corazones",
+      "title": "Dos Corazones",
+      "description": "Dos corazones entrelazados con las iniciales de la pareja en el pecho. Este tatuaje es ideal para mostrar el amor y la unión entre dos personas.",
+      "price": 1900,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-perrito",
+      "title": "Perrito",
+      "description": "Perrito a blanco y negro con un sombrero y una corbata en el hombro. Este tatuaje es muy divertido y original, perfecto para los amantes de los animales y el humor.",
+      "price": 999,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-luna-estrellas",
+      "title": "Luna y estrellas",
+      "description": "La luna con estrellas y una cara sonriente en el cuello. Este tatuaje es muy tierno y simpático, ideal para los que sueñan con el espacio y la noche.",
+      "price": 2000,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-infinito",
+      "title": "Infinito",
+      "description": "Infinito con una pluma y una palabra en el dedo. Este tatuaje significa la eternidad, la escritura y la expresión.",
+      "price": 3000,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
     }
   ]
 }

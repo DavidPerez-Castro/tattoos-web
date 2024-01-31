@@ -21,39 +21,44 @@
   </mat-sidenav>
 
 
-  <mat-toolbar color="primary">
+  <mat-toolbar color="primary" class="h-5rem">
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
     <span class="spacer">
-      <a mat-button href="./tatuajes/home">
+      <a class="btn-home" mat-button href="./tatuajes/home">
         Skin Tattoos
       </a>
+      <style>
+        @media screen and (max-width: 300px) {
+          .btn-home {
+            display: none;
+          }
+        }
+      </style>
     </span>
-    <span class="example-spacer" style="flex: 1 1 auto;"></span>
+    <span class="spacer"></span>
+      <app-search></app-search>
+    <button class="btn-login" mat-button>
+      Login
+    </button>
+    <style>
+      @media screen and (max-width: 767px) {
+        .btn-login {
+          display: none; /* Oculta el botón en dispositivos con un ancho máximo de 767px */
+        }
+      }
+    </style>
     <button mat-button>
-      <mat-icon>search</mat-icon>
+      <mat-icon>shopping_cart</mat-icon>
     </button>
   </mat-toolbar>
 
-  <div class="container p-2">
+  <div class="container min-h-screen p-2 mb-3">
     <router-outlet></router-outlet>
   </div>
 
-  <mat-toolbar color="primary">
-    <mat-toolbar-row class="flex justify-content-center">
-      <span>
-        <mat-icon>copyright</mat-icon>
-        2024, Tato Piel
-      </span>
-    </mat-toolbar-row>
-
-    <mat-toolbar-row class="flex justify-content-center">
-      <span>Términos</span>
-    </mat-toolbar-row>
-
-    <mat-toolbar-row class="flex justify-content-center">
-      <span>Aviso de Privacidad</span>
-    </mat-toolbar-row>
-  </mat-toolbar>
+  <div class="footer">
+    <app-footer-page></app-footer-page>
+  </div>
 </mat-sidenav-container>

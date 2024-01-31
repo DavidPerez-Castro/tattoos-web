@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Tato } from '../../interfaces/tato.interface';
 import { TatuajesService } from '../../services/tatuajes.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-page',
@@ -10,7 +11,7 @@ export class ProductPageComponent implements OnInit {
 
   public tatuajes: Tato[] = [];
 
-  constructor( private tatuajesService: TatuajesService ) {}
+  constructor( private tatuajesService: TatuajesService, private route: ActivatedRoute ) {}
 
   ngOnInit() {
     this.tatuajesService.getTatuajes()
