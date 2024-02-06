@@ -39,9 +39,17 @@
     </span>
     <span class="spacer"></span>
       <app-search></app-search>
-    <button class="btn-login" mat-button>
-      Login
-    </button>
+      <div *ngIf="authService.isLoggedIn; else notLoggedIn">
+        {{ firstName }}
+        <!-- Mostrar elementos para usuarios autenticados -->
+        <button (click)="logout()">Cerrar Sesión</button>
+      </div>
+      <ng-template #notLoggedIn>
+        <button class="btn-login" mat-button routerLink="/auth/login">
+          <mat-icon>login</mat-icon>
+        </button>
+      </ng-template>
+
     <style>
       @media screen and (max-width: 767px) {
         .btn-login {

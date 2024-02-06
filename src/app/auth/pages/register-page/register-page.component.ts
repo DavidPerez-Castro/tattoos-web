@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+import { User } from '../../interfaces/user.interface';
 
 @Component({
   selector: 'app-register-page',
@@ -7,14 +9,29 @@ import { FormControl, Validators } from '@angular/forms';
   styles: ``,
 })
 export class RegisterPageComponent {
-  hide = true;
-  email = new FormControl('', [Validators.required, Validators.email]);
+  user = {
+    firstName: '',
+    lastName: '',
+    username: '',
+    email: '',
+    password: ''
+    // Agrega otros campos necesarios para el registro
+  };
 
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
+  constructor(private authService: AuthService, private router: Router) {}
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+  register(){
+    this.authService.register(this.user).subscribe(
+      (response) => {
+        console.log('Registro exitoso', response);
+        // Realiza acciones adicionales después del registro si es necesario
+        // Redirigir a la página de inicio de sesión u otra página después del registro
+        this.router.navigate(['/auth/login']);
+      },
+      (error) => {
+        console.error('Error en el registro', error);
+        // Manejar el error, mostrar un mensaje al usuario, etc.
+      }
+    );
   }
 }

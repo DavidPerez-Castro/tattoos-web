@@ -1,41 +1,38 @@
-<section class="sc-register">
-  <div class="flex flex-column">
-    <span class="text-lg mb-4">Register</span>
-
-    <mat-form-field>
-      <mat-label>Usuario</mat-label>
-      <input type="text" matInput placeholder="Nombre de usuario">
-    </mat-form-field>
-
-    <mat-form-field>
-      <mat-label>Enter your email</mat-label>
-      <input matInput placeholder="pat@example.com" [formControl]="email" required>
-      @if (email.invalid) {
-        <mat-error>{{getErrorMessage()}}</mat-error>
-      }
-    </mat-form-field>
-
-    <mat-form-field>
-      <mat-label>Enter your password</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'">
-      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+<div class="flex">
+  <div class="img-login w-12rem h-20rem md:w-22rem md:h-30rem xl:w-30rem xl:h-30rem">
+    <img src="./assets/tatuajes/tatuaje-intro.jpg" alt="ddd" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+  <div class="flex flex-column w-12rem h-20rem md:w-17rem md:h-30rem xl:w-20rem xl:h-30rem align-items-center" style="background-color: #3b1f6f; color: #fbfbff;">
+    <h1 class="font-medium text-xl md:text-3xl xl:text-4xl mt-2 ml-2">Registrarse</h1>
+    <form (ngSubmit)="register()" #registerForm="ngForm" class="w-full h-15rem md:h-21rem xl:w-full xl:h-23rem flex flex-column justify-content-evenly align-items-center">
+      <div class="form-group flex flex-column">
+        <label for="firstName">Nombre:</label>
+        <input type="text" id="firstName" name="firstName" [(ngModel)]="user.firstName" class="form-control" required>
+      </div>
+      <div class="form-group flex flex-column">
+        <label for="lastName">Apellido:</label>
+        <input type="text" id="lastName" name="lastName" [(ngModel)]="user.lastName" class="form-control" required>
+      </div>
+      <div class="form-group flex flex-column">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="username" [(ngModel)]="user.username" class="form-control" required>
+      </div>
+      <div class="form-group flex flex-column">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="user.email" class="form-control" required>
+      </div>
+      <div class="form-group flex flex-column">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="user.password" class="form-control" required>
+      </div>
+      <button type="submit" mat-button mat-flat-button color="primary" [disabled]="!registerForm.valid">
+        <mat-icon>save</mat-icon>
+        Registrar
       </button>
-    </mat-form-field>
-
-    <!--<mat-form-field>
-      <mat-label>Contraseña</mat-label>
-      <input type="password" matInput placeholder="Contraseña">
-    </mat-form-field>-->
-
-    <button mat-button mat-flat-button color="primary">
-      <mat-icon>save</mat-icon>
-      Ingresar
-    </button>
-
-    <div class="flex justify-content-end mt-5">
-      <a routerLink="/auth/login">¿Ya tienes cuenta?</a>
-    </div>
+      <div class="flex justify-content-end mt-5">
+        <a routerLink="/auth/login">Iniciar sesión</a>
+      </div>
+    </form>
   </div>
 
-</section>
+</div>

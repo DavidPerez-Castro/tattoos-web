@@ -1,24 +1,36 @@
-<section class="sc-login">
-  <div class="flex flex-column">
-    <span class="text-lg mb-4">Login</span>
-
-    <mat-form-field>
-      <mat-label>Usuario</mat-label>
-      <input type="text" matInput placeholder="Nombre de usuario">
-    </mat-form-field>
-
-    <mat-form-field>
-      <mat-label>Contraseña</mat-label>
-      <input type="password" matInput placeholder="Contraseña">
-    </mat-form-field>
-
-    <button mat-button mat-flat-button color="primary">
-      <mat-icon>save</mat-icon>
-      Ingresar
-    </button>
-
-    <div class="flex justify-content-end mt-5">
-      <a routerLink="/auth/new-account">Tienes cuenta?</a>
-    </div>
+<div class="flex">
+  <div class="img-login w-12rem h-20rem md:w-22rem md:h-30rem xl:w-30rem xl:h-30rem">
+    <img src="./assets/tatuajes/tatuaje-intro.jpg" alt="ddd" style="width: 100%; height: 100%; object-fit: cover;">
   </div>
-</section>
+  <div class="flex flex-column w-12rem h-20rem md:w-17rem md:h-30rem xl:w-20rem xl:h-30rem align-items-center" style="background-color: #3b1f6f; color: #fbfbff;">
+    <div class="w-full h-5rem md:h-9rem xl:w-full xl:h-7rem">
+      <h1 class="font-medium text-xl md:text-3xl xl:text-4xl mt-2 ml-2">Hola!</h1>
+      <h2 class="font-bold text-xl md:text-3xl xl:text-4xl ml-2">Bienvenido</h2>
+    </div>
+    <form (ngSubmit)="login()" #loginForm="ngForm" class="w-full h-15rem md:h-21rem xl:w-full xl:h-23rem flex flex-column justify-content-evenly align-items-center">
+      <h1 class="text-lg md:text-2xl xl:text-3xl">Iniciar Sesión</h1>
+      <div class="form-group flex flex-column">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" [(ngModel)]="user.email" class="form-control" required>
+      </div>
+
+      <div class="form-group flex flex-column">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="user.password" required>
+      </div>
+
+      <div class="xl:ml-8">
+        <p>Olvido su contraseña?</p>
+      </div>
+
+      <button mat-button mat-flat-button color="primary" type="submit">
+        <mat-icon>save</mat-icon>
+        Iniciar sesión
+      </button>
+
+      <div>
+        <a routerLink="/auth/new-account">Registrarse</a>
+      </div>
+    </form>
+  </div>
+</div>
