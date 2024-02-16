@@ -23,14 +23,13 @@ export class LoginPageComponent {
     this.authService.login(this.user).subscribe(
       response => {
         console.log('Inicio de sesión exitoso:', response);
-        // Manejar la respuesta del servidor, por ejemplo, guardar el token en el localStorage.
         console.log('Token:', response.token);
+        console.log('Nombre:', response.firstName);
         this.router.navigate(['/tatuajes/home']);
 
         console.log('Usuario autenticado:', this.authService.isLoggedIn);
       },
       error => {
-        // Manejar errores
         console.error('Error:', error);
       }
     );

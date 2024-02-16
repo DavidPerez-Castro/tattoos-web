@@ -15,7 +15,6 @@ export class RegisterPageComponent {
     username: '',
     email: '',
     password: ''
-    // Agrega otros campos necesarios para el registro
   };
 
   constructor(private authService: AuthService, private router: Router) {}
@@ -24,13 +23,10 @@ export class RegisterPageComponent {
     this.authService.register(this.user).subscribe(
       (response) => {
         console.log('Registro exitoso', response);
-        // Realiza acciones adicionales después del registro si es necesario
-        // Redirigir a la página de inicio de sesión u otra página después del registro
         this.router.navigate(['/auth/login']);
       },
       (error) => {
         console.error('Error en el registro', error);
-        // Manejar el error, mostrar un mensaje al usuario, etc.
       }
     );
   }

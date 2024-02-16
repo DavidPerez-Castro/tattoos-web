@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TatuajesService } from '../../services/tatuajes.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs';
-import { Tato, Details } from '../../interfaces/tato.interface';
+import { Tato } from '../../interfaces/tato.interface';
 
 @Component({
   selector: 'app-tato-page',
@@ -11,7 +11,6 @@ import { Tato, Details } from '../../interfaces/tato.interface';
 export class TatoPageComponent implements OnInit {
 
   public tato?: Tato;
-  public date?: Details;
 
   constructor(
     private tatuajesService: TatuajesService,

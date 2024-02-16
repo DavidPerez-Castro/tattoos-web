@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSliderModule, MatSliderThumb} from '@angular/material/slider';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import {MatSliderModule, MatSliderThumb} from '@angular/material/slider';
     MatToolbarModule,
     MatTabsModule,
     MatPaginatorModule,
-    MatSliderModule
+    MatSliderModule,
+    MatMenuModule
   ]
 })
 export class MaterialModule { }

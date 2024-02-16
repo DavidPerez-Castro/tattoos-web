@@ -17,6 +17,10 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { CardImgComponent } from './components/card-img/card-img.component';
 import { FooterPageComponent } from './pages/footer-page/footer-page.component';
 import { SearchComponent } from './components/search/search.component';
+import { MenuuserComponent } from './user/menuuser/menuuser.component';
+import { PerfiluserComponent } from './user/perfiluser/perfiluser.component';
+import { NewPageComponent } from './pages/new-page/new-page.component';
+import { ComfirmDialogComponent } from './components/comfirm-dialog/comfirm-dialog.component';
 
 @NgModule({
   imports: [
@@ -41,6 +45,10 @@ import { SearchComponent } from './components/search/search.component';
 
     // Pipes
     TatoImagePipe,
+      MenuuserComponent,
+      PerfiluserComponent,
+      NewPageComponent,
+      ComfirmDialogComponent,
   ],
 })
 export class TatuajesModule { }

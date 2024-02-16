@@ -5,14 +5,8 @@ export interface Tato {
   title:       string;
   description: string;
   price:       number;
-  details:     Details;
-  image?:       string;
-}
-
-export interface Details {
-  size:  string;
-  color: string;
-  style: Style;
+  style:       Style;
+  image?:      string;
 }
 
 export enum Style {

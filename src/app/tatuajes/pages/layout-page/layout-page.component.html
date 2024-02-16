@@ -21,7 +21,7 @@
   </mat-sidenav>
 
 
-  <mat-toolbar color="primary" class="h-5rem">
+  <mat-toolbar color="primary" class="h-5rem relative">
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
@@ -30,7 +30,7 @@
         Skin Tattoos
       </a>
       <style>
-        @media screen and (max-width: 300px) {
+        @media screen and (max-width: 450px) {
           .btn-home {
             display: none;
           }
@@ -38,22 +38,22 @@
       </style>
     </span>
     <span class="spacer"></span>
-      <app-search></app-search>
-      <div *ngIf="authService.isLoggedIn; else notLoggedIn">
-        {{ firstName }}
-        <!-- Mostrar elementos para usuarios autenticados -->
-        <button (click)="logout()">Cerrar Sesión</button>
-      </div>
-      <ng-template #notLoggedIn>
-        <button class="btn-login" mat-button routerLink="/auth/login">
-          <mat-icon>login</mat-icon>
-        </button>
-      </ng-template>
+    <app-search class="mr-2"></app-search>
+
+    <button mat-button [matMenuTriggerFor]="menu" (click)="openUserMenu()" *ngIf="authService.isLoggedIn" class="mr-2">
+      {{ userInformation.firstName }}
+    </button>
+    <mat-menu #menu="matMenu">
+      <app-menuuser *ngIf="showUserMenu" (logoutClicked)="logout()"></app-menuuser>
+    </mat-menu>
+    <ng-container *ngIf="!authService.isLoggedIn">
+      <button mat-button routerLink="/auth/login">Ingresa</button>
+    </ng-container>
 
     <style>
       @media screen and (max-width: 767px) {
         .btn-login {
-          display: none; /* Oculta el botón en dispositivos con un ancho máximo de 767px */
+          display: none;
         }
       }
     </style>

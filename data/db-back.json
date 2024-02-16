@@ -1,16 +1,9 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "name": "John Doe",
-      "email": "john.due@gmail.com"
-    }
-  ],
   "tatuajes": [
     {
       "id": "tatuaje-ave",
-      "title": "Ave en libertad",
-      "description": "Ave en su camino a la libertad.",
+      "title": "Ave simbolo de la libertad",
+      "description": "Tatuaje de ave puede simbolizar la libertad, la transcendencia, la espiritualidad, la conexión con la naturaleza o incluso la superación de desafíos.",
       "price": 350,
       "details": {
         "size": "Mediano",
@@ -21,7 +14,7 @@
     {
       "id": "tatuaje-dragon",
       "title": "Dragón japones",
-      "description": "Dragón tradicional japones representativo.",
+      "description": "Un dragón japonés es una criatura mítica y legendaria que forma parte importante de la mitología y la cultura japonesa. Los dragones japoneses suelen representarse como criaturas alargadas y serpentinas, con cabezas más parecidas a las de un caballo o un ciervo, adornadas con cuernos, y a menudo con bigotes largos.",
       "price": 600,
       "details": {
         "size": "Pequeño",
@@ -30,9 +23,9 @@
       }
     },
     {
-      "id": "tatuaje-duende",
-      "title": "Duende volador",
-      "description": "Duende en un cuento de hadas.",
+      "id": "tatuaje-tigre",
+      "title": "Tigre",
+      "description": "Los tigres son criaturas majestuosas y poderosas que han sido simbolizadas en diversas culturas como símbolos de coraje y poder.",
       "price": 350,
       "details": {
         "size": "Mediano",
@@ -43,7 +36,7 @@
     {
       "id": "tatuaje-gatoninja",
       "title": "Gato ninja",
-      "description": "Gato ninja en su prime.",
+      "description": "El gato, siendo ágil y silencioso, puede simbolizar la astucia y la agilidad del ninja, mientras que el concepto de gato ninja en sí mismo puede transmitir una sensación de misterio, habilidad y versatilidad.",
       "price": 550,
       "details": {
         "size": "Mediano",
@@ -52,21 +45,20 @@
       }
     },
     {
-      "id": "tatuaje-kakashikurama",
-      "title": "Kakashi y Kurama",
-      "description": "Kakashi protejiendo a kurama bébe.",
+      "id": "tatuaje-corazon",
+      "title": "Amor pintado",
+      "description": "Representa los sentimientos en una cadena de ramas en corazón, expresando tus sentimientos.",
       "price": 750,
       "details": {
         "size": "Mediano",
         "color": "Blanco, negro, rojo y naranja",
         "style": "Acuarela"
-      },
-      "image": "../src/assets/tattoos/tattoos-kakashi.jpg"
+      }
     },
     {
       "id": "tatuaje-mandala",
       "title": "Mandalas",
-      "description": "Patron de mandalas.",
+      "description": "Los tatuajes de mandalas son diseños circulares elaborados que tienen sus raíces en la espiritualidad y la cultura oriental, especialmente en el hinduismo y el budismo. Estos patrones intrincados consisten en formas geométricas, líneas y símbolos que convergen hacia el centro del círculo.",
       "price": 550,
       "details": {
         "size": "Grande",
@@ -77,7 +69,7 @@
     {
       "id": "tatuaje-padrehija",
       "title": "Padre e hija",
-      "description": "Padre e hija juntos.",
+      "description": "Un tatuaje de padre e hija es un diseño que simboliza el vínculo especial y el amor incondicional entre un padre y su hija. Estos tatuajes suelen representar una conexión emocional profunda y duradera.",
       "price": 400,
       "details": {
         "size": "Chico",
@@ -88,7 +80,7 @@
     {
       "id": "tatuaje-pato",
       "title": "Pato feliz",
-      "description": "Pato en su prime.",
+      "description": "Libertad: La habilidad de los patos para volar y nadar libremente puede simbolizar la libertad y la independencia.",
       "price": 400,
       "details": {
         "size": "Chico",
@@ -99,7 +91,7 @@
     {
       "id": "tatuaje-rosas",
       "title": "Rosas",
-      "description": "Cadena de rosas bonitas.",
+      "description": "Las rosas son flores que han sido admiradas a lo largo de la historia y se asocian con una amplia gama de significados.",
       "price": 900,
       "details": {
         "size": "Grande",
@@ -109,14 +101,132 @@
     },
     {
       "id": "tatuaje-sol",
-      "title": "Sol triste",
-      "description": "Sol en un mundo triste.",
+      "title": "Sol",
+      "description": "Un tatuaje de sol es un diseño que simboliza la vida, la energía, la vitalidad y la renovación. Es un motivo popular en diferentes culturas y se presta a una amplia gama de interpretaciones y estilos artísticos.",
       "price": 400,
       "details": {
         "size": "Chico",
         "color": "Negro",
         "style": "Estilo mexicano tradicional"
       }
+    },
+    {
+      "id": "tatuaje-corazon-alas-angel",
+      "title": "Corazon con alas de ángel",
+      "description": "Corazón con alas de ángel, una corona de espinas, una llave y un fondo de cielo y nubes.",
+      "price": 1500,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-buho",
+      "title": "Búho",
+      "description": "Búho con plumas marrones, ojos azules, un sombrero de copa y un fondo de luna y estrellas.",
+      "price": 999,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-flor-loto",
+      "title": "Flor de loto",
+      "description": "Flor de loto con pétalos rosados, un centro amarillo y un fondo de agua y hojas verdes.",
+      "price": 1000,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-lobo",
+      "title": "Lobo",
+      "description": "Lobo aullando a la luna en el brazo. Este tatuaje simboliza la fuerza, la libertad y la conexión con la naturaleza.",
+      "price": 1699,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-pluma-ave",
+      "title": "Pluma ave",
+      "description": "Una pluma con un pájaro volando en la muñeca. Este tatuaje significa la ligereza, la creatividad y el deseo de volar.",
+      "price": 1500,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-mariposa",
+      "title": "Mariposa",
+      "description": "Mariposa multicolor en la mano. Este tatuaje representa la transformación, la belleza y la alegría.",
+      "price": 3000,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-dos-corazones",
+      "title": "Dos Corazones",
+      "description": "Dos corazones entrelazados con las iniciales de la pareja en el pecho. Este tatuaje es ideal para mostrar el amor y la unión entre dos personas.",
+      "price": 1900,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-perrito",
+      "title": "Perrito",
+      "description": "Perrito a blanco y negro con un sombrero y una corbata en el hombro. Este tatuaje es muy divertido y original, perfecto para los amantes de los animales y el humor.",
+      "price": 999,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-luna-estrellas",
+      "title": "Luna y estrellas",
+      "description": "La luna con estrellas y una cara sonriente en el cuello. Este tatuaje es muy tierno y simpático, ideal para los que sueñan con el espacio y la noche.",
+      "price": 2000,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "tatuaje-infinito",
+      "title": "Infinito",
+      "description": "Infinito con una pluma y una palabra en el dedo. Este tatuaje significa la eternidad, la escritura y la expresión.",
+      "price": 3000,
+      "details": {
+        "size": "Chico",
+        "color": "Negro",
+        "style": "Estilo mexicano tradicional"
+      }
+    },
+    {
+      "id": "r2PFl2c",
+      "title": "infinito",
+      "description": "Sin tiempo no hay limites",
+      "price": "662",
+      "style": "Acuarela",
+      "image": "https://t2.uc.ltmcdn.com/es/posts/5/2/3/significado_de_los_tatuajes_de_infinito_con_fotos_48325_600_square.jpg"
     }
   ]
 }

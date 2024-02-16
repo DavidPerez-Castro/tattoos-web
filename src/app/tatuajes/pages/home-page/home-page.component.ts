@@ -24,9 +24,9 @@ export class HomePageComponent implements OnInit {
   }
 
   showImages() {
-    if (window.innerWidth >= 768) { // Dispositivos de escritorio o tablets (ancho mayor o igual a 768px)
+    if (window.innerWidth >= 768) {
       this.visibleImages = this.images.slice(this.currentStartIndex, this.currentStartIndex + 3);
-    } else { // Dispositivos móviles (ancho menor a 768px)
+    } else {
       this.visibleImages = this.images.slice(this.currentStartIndex, this.currentStartIndex + 1);
     }
   }

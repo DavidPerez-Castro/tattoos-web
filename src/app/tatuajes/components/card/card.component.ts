@@ -12,7 +12,7 @@ export class CardComponent implements OnInit {
   //constructor() { }
 
   @Input()
-  public tato: Tato | undefined;
+  public tato!: Tato;
 
   ngOnInit(): void {
     if (!this.tato) throw Error('Tato property is required');

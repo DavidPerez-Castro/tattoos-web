@@ -1,5 +1,4 @@
 <section class="sec-about flex flex-column max-w-full py-0 px-2 md:px-0 md:py-0 m-0 m-auto">
-  <!--One-->
   <div class="vision-about grid mb-3">
     <div class="col-12 md:col-6">
       <img src="./assets/tatuajes/tatuaje-pj2.jpg" alt="vision-about" style="width: 100%; height: 100%; object-fit: cover;">
@@ -17,7 +16,6 @@
       </p>
     </div>
   </div>
-  <!--Two-->
   <div class="ask-about grid mb-3">
     <h2 class="col-12 text-xl md:text-5xl m-0 text-center font-bold py-1 px-1 md:px-3 md:py-2 mx-0 my-0 md:mb-5">¿Por qué elegimos tatuar?</h2>
     <p class="col-12 text-lg md:text-4xl m-0 text-center font-italic line-height-1 font-light md:font-medium py-1 px-1 md:px-3 md:py-2">
@@ -28,18 +26,9 @@
       creamos tatuajes, sino que también cultivamos conexiones duraderas a través del arte grabado en la piel.
     </p>
   </div>
-  <!--Three
-  <div class="imgs-presentation-about">
-    <mat-grid-list cols="4" rowHeight="450px" class="mobile-cols-1">
-        <mat-grid-tile *ngFor="let tile of tiles; trackBy: trackByFn" [colspan]="tile.cols" [rowspan]="tile.rows">
-          <img [src]="tile.image" alt="Dynamic Image" style="width: 100%; height: 100%; object-fit: cover;">
-        </mat-grid-tile>
-    </mat-grid-list>
-  </div>-->
-
   <div class="galery-about grid">
     <div class="col-12 md:col-6 lg:col-3" *ngFor="let tile of tiles">
       <img [src]="tile.image" alt="Dynamic Image" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
-</div>
+  </div>
 </section>

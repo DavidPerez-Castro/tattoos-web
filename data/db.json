@@ -1,11 +1,4 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "name": "John Doe",
-      "email": "john.due@gmail.com"
-    }
-  ],
   "tatuajes": [
     {
       "id": "tatuaje-ave",
@@ -226,6 +219,14 @@
         "color": "Negro",
         "style": "Estilo mexicano tradicional"
       }
+    },
+    {
+      "id": "r2PFl2c",
+      "title": "infinito",
+      "description": "Sin tiempo no hay limites",
+      "price": "662",
+      "style": "Acuarela",
+      "image": "https://t2.uc.ltmcdn.com/es/posts/5/2/3/significado_de_los_tatuajes_de_infinito_con_fotos_48325_600_square.jpg"
     }
   ]
 }

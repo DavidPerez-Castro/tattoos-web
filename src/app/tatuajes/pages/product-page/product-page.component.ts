@@ -15,7 +15,6 @@ export class ProductPageComponent implements OnInit {
 
   ngOnInit() {
     this.tatuajesService.getTatuajes()
-    // Se suscribe al observable de la clase servicio para obtener los datos cuando estén listos
     .subscribe( tatuajes => this.tatuajes = tatuajes );
   }
 

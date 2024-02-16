@@ -8,7 +8,8 @@ import { AuthService } from '../../../auth/services/auth.service';
   styles: ``
 })
 export class LayoutPageComponent implements OnInit {
-  firstName: string | null = '';
+  userInformation: any = {};
+  showUserMenu: boolean = false;
 
   constructor(public authService: AuthService) {}
 
@@ -17,18 +18,23 @@ export class LayoutPageComponent implements OnInit {
     { label: 'Productos', icon: 'category', url: './product' },
     { label: 'Sobre nosotros', icon: 'info', url: './about' },
     { label: 'Contacto', icon: 'contacts_product', url: './contact' },
-    //{ label: 'Buscar', icon: 'search', url: './search' },
-  ]
+    { label: 'Añadir', icon: 'add', url: './new-tato' },
+  ];
 
   ngOnInit(): void {
-    // Recuperar el nombre del usuario del localStorage al inicializar el componente
-    this.firstName = this.authService.getFirstName() || '';
+    // Recuperar la información del usuario al inicializar el componente
+    this.userInformation = this.authService.userInformation;
+  }
+
+  openUserMenu(): void {
+    this.showUserMenu = !this.showUserMenu;
   }
 
   logout(): void {
     this.authService.logout();
+    this.userInformation = {};
+    this.showUserMenu = false;
     console.log('Usuario desautenticado:', this.authService.isLoggedIn);
-    // Puedes realizar otras acciones después de cerrar sesión, como redirigir a la página de inicio, etc.
   }
 
 }
