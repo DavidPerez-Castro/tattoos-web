@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { Router } from '@angular/router';
@@ -16,12 +16,13 @@ export class SearchComponent {
   public tatuajes: Tato[] = [];
   public selectedTato?: Tato;
 
-  constructor( private tatuajesService: TatuajesService, private router: Router ){}
+  constructor(private router: Router, private tatuajesService: TatuajesService) {}
+
 
   searchTato() {
     const value: string = this.searchInput.value || '';
 
-    this.tatuajesService.getSuggestions( value )
+    this.tatuajesService.searchTattoos( value )
       .subscribe( tatuajes => this.tatuajes = tatuajes );
   }
 
@@ -34,16 +35,14 @@ export class SearchComponent {
 
     const tato: Tato = event.option.value;
 
-    this.tatuajesService.getTatoById(tato.id).subscribe((fullTato) => {
+    this.tatuajesService.getTattooById(tato._id).subscribe((fullTato) => {
       if (fullTato) {
         this.selectedTato = fullTato;
         this.searchInput.setValue(fullTato.title);
 
         // Navegar a la página de detalles de búsqueda con el ID del tatuaje seleccionado
-        this.router.navigate(['/tatuajes/search', fullTato.id]);
+        this.router.navigate(['/tatuajes/search', fullTato._id]);
       }
     });
   }
 }
-
-

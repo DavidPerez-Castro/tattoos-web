@@ -11,42 +11,19 @@ export class TatuajesService {
 
   constructor(private http: HttpClient) { }
 
-  //Endpoint Http
-  //Función emitiendo un arreglo de Tato
-  getTatuajes():Observable<Tato[]>{
-    return this.http.get<Tato[]>(`${ this.baseUrl }/tatuajes`);
+  //Muestra todos los tatuajes
+  getTattoos():Observable<any>{
+    return this.http.get(this.baseUrl);
   }
 
-  getTatoById( id: string ): Observable<Tato|undefined> {
-    return this.http.get<Tato>(`${this.baseUrl}/tatuajes/${id}`)
-      .pipe(
-        catchError(error => {
-          console.error(`Error fetching tato with ID ${id}:`, error);
-          return of(undefined);
-        })
-      );
+  //Buscar tatuajes
+  searchTattoos(query: string): Observable<Tato[]> {
+    return this.http.get<Tato[]>(`${this.baseUrl}/search?query=${query}`);
   }
 
-  getSuggestions( query: string ): Observable<Tato[]> {
-    return this.http.get<Tato[]>(`${ this.baseUrl }/tatuajes?q=${ query }&_limit=6`);
+  //Obtener tatuaje por id
+  getTattooById(id: string): Observable<Tato> {
+    return this.http.get<Tato>(`${this.baseUrl}/${id}`);
   }
 
-  addTato( tato: Tato ): Observable<Tato> {
-    return this.http.post<Tato>(`${ this.baseUrl }/tatuajes`, tato );
-  }
-
-  updateTato( tato: Tato ): Observable<Tato> {
-    if ( !tato.id ) throw Error('Tatoo id is required');
-
-    return this.http.patch<Tato>(`${ this.baseUrl }/tatuajes/${ tato.id }`, tato );
-  }
-
-  deleteTatoById( id: string ): Observable<boolean> {
-
-    return this.http.delete(`${ this.baseUrl }/tatuajes/${ id }`)
-      .pipe(
-        map( resp => true ),
-        catchError( err => of(false) ),
-      );
-  }
 }

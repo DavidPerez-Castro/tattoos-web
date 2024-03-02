@@ -1,27 +1,26 @@
 <div class="h-5rem">
   <mat-form-field class="w-10rem md:w-25rem xl:w-30rem h-5rem mt-2">
-    <mat-label>Buscar tatuajes</mat-label>
     <input
-      type="text"
-      matInput
-      [formControl]="searchInput"
-      (input)="searchTato()"
-      [matAutocomplete]="auto"
-    />
+    type="text"
+    matInput
+    [formControl]="searchInput"
+    (input)="searchTato()"
+    [matAutocomplete]="auto"
+    placeholder="Buscar Tatuajes"/>
 
     <mat-autocomplete autoActiveFirstOption
-      #auto="matAutocomplete"
-      (optionSelected)="onSelectedOption( $event )"
-      >
-      <mat-option *ngFor="let tato of tatuajes" [value]="tato">
-        {{ tato.title }}
-      </mat-option>
+        #auto="matAutocomplete"
+        (optionSelected)="onSelectedOption( $event )"
+        >
+        <mat-option *ngFor="let tato of tatuajes" [value]="tato">
+          {{ tato.title }}
+        </mat-option>
 
-      <mat-option
-        *ngIf="tatuajes.length === 0 && searchInput.value && searchInput.value.length > 0"
-        value="">
-        No se encontró nada con el término {{ searchInput.value }}
-      </mat-option>
-    </mat-autocomplete>
+        <mat-option
+          *ngIf="tatuajes.length === 0 && searchInput.value && searchInput.value.length > 0"
+          value="">
+          No se encontró nada con el término {{ searchInput.value }}
+        </mat-option>
+      </mat-autocomplete>
   </mat-form-field>
 </div>

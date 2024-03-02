@@ -19,8 +19,6 @@ import { FooterPageComponent } from './pages/footer-page/footer-page.component';
 import { SearchComponent } from './components/search/search.component';
 import { MenuuserComponent } from './user/menuuser/menuuser.component';
 import { PerfiluserComponent } from './user/perfiluser/perfiluser.component';
-import { NewPageComponent } from './pages/new-page/new-page.component';
-import { ComfirmDialogComponent } from './components/comfirm-dialog/comfirm-dialog.component';
 
 @NgModule({
   imports: [
@@ -47,8 +45,6 @@ import { ComfirmDialogComponent } from './components/comfirm-dialog/comfirm-dial
     TatoImagePipe,
       MenuuserComponent,
       PerfiluserComponent,
-      NewPageComponent,
-      ComfirmDialogComponent,
   ],
 })
 export class TatuajesModule { }

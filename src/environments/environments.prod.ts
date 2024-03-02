@@ -1,4 +1,4 @@
 //Producción
 export const environments = {
-  baseUrl: 'https://fernando-herrera.com/api'
+  baseUrl: 'https://crud-tattoos-api.onrender.com/api/tattoos'
 }

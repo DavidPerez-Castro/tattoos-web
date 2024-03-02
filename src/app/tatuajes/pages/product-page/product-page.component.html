@@ -1,9 +1,9 @@
 <h1 class="font-bold text-center xl:text-4xl md:text-2xl">Tatuajes</h1>
 <mat-divider></mat-divider>
 <div class="tattoo-product grid bm-8 p-2">
-  <div *ngFor="let tato of tatuajes"
+  <div *ngFor="let tattoo of tato"
   class="tattoo-card col-12 md:col-6 lg:col-3 flex justify-content-center">
-    <tatuajes-tato-card [tato]="tato"></tatuajes-tato-card>
+    <tatuajes-tato-card [tato]="tattoo"></tatuajes-tato-card>
   </div>
 
 </div>

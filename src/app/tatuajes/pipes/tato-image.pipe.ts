@@ -9,13 +9,13 @@ export class TatoImagePipe implements PipeTransform {
 
   transform( tato: Tato ): string {
 
-    if ( !tato.id && !tato.image ) {
+    if ( !tato._id && !tato.imageUrl ) {
       return 'assets/no-image.png';
     }
 
-    if ( tato.image ) return tato.image; // https:///google.com/flash.png
+    if ( tato.imageUrl ) return tato.imageUrl; // https:///google.com/flash.png
 
-    return `assets/tatuajes/${ tato.id }.jpg`;
+    return `assets/tatuajes/${ tato._id }.jpg`;
 
   }
 

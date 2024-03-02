@@ -9,13 +9,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductPageComponent implements OnInit {
 
-  public tatuajes: Tato[] = [];
+  tato: any[] = [];
 
   constructor( private tatuajesService: TatuajesService, private route: ActivatedRoute ) {}
 
-  ngOnInit() {
-    this.tatuajesService.getTatuajes()
-    .subscribe( tatuajes => this.tatuajes = tatuajes );
+  ngOnInit():void {
+    this.tatuajesService.getTattoos()
+    .subscribe( (data) => { this.tato = data;
+    });
   }
 
 }

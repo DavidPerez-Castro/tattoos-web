@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TatuajesService } from '../../services/tatuajes.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { switchMap } from 'rxjs';
+import { switchMap, EMPTY } from 'rxjs';
 import { Tato } from '../../interfaces/tato.interface';
 
 @Component({
@@ -22,7 +22,7 @@ export class TatoPageComponent implements OnInit {
     this.activatedRoute.params
     .pipe(
       //delay(3000),
-      switchMap( ({ id }) => this.tatuajesService.getTatoById( id ) ),
+      switchMap( ({ id }) => this.tatuajesService.getTattooById( id ) ),
     )
     .subscribe( tato => {
       if ( !tato ) return this.router.navigate([ '/tatuajes/product' ]);

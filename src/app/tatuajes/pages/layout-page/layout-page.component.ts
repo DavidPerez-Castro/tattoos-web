@@ -18,7 +18,6 @@ export class LayoutPageComponent implements OnInit {
     { label: 'Productos', icon: 'category', url: './product' },
     { label: 'Sobre nosotros', icon: 'info', url: './about' },
     { label: 'Contacto', icon: 'contacts_product', url: './contact' },
-    { label: 'Añadir', icon: 'add', url: './new-tato' },
   ];
 
   ngOnInit(): void {

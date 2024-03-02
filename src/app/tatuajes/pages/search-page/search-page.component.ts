@@ -20,7 +20,7 @@ export class SearchPageComponent implements OnInit{
     this.activatedRoute.params.subscribe((params) => {
       const tatoId = params['id'];
 
-      this.tatuajesService.getTatoById(tatoId).subscribe((fullTato) => {
+      this.tatuajesService.getTattooById(tatoId).subscribe((fullTato) => {
         if (fullTato) {
           this.selectedTato = fullTato;
         } else {

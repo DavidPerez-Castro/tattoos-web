@@ -8,7 +8,7 @@ import { tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiAuth = 'http://localhost:4000/api/auth';
+  private apiAuth = 'http://localhost:5000/api/auth';
   isLoggedIn = !!localStorage.getItem('token');
   userInformation: any = {};
 
