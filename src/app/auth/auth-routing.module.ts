@@ -6,7 +6,6 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 
 // localhost:4200/auth/
-//Rutas para nevegar por pages
 const routes: Routes = [
   {
     path: '',

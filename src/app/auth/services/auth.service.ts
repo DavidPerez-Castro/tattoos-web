@@ -8,7 +8,7 @@ import { tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiAuth = 'http://localhost:5000/api/auth';
+  private apiAuth = 'http://localhost:3000/api/auth';
   isLoggedIn = !!localStorage.getItem('token');
   userInformation: any = {};
 
@@ -36,21 +36,21 @@ export class AuthService {
   login(user: any): Observable<any> {
     return this.http.post(`${this.apiAuth}/login`, user).pipe(
       tap((response: any) => {
-        console.log('Inicio de sesión exitoso:', response);
+        //console.log('Inicio de sesión exitoso:', response);
 
         // Verifica si el correo electrónico está presente en la respuesta
         if (response.firstName) {
           localStorage.setItem('firstName', response.firstName);
           this.userInformation.firstName = response.firstName;
-          console.log('Nombre:', response.firstName); // Agrega este mensaje de consola
+          //console.log('Nombre:', response.firstName); // Agrega este mensaje de consola
         } else {
-          console.error('Nombre no presente en la respuesta del servidor');
+          //console.error('Nombre no presente en la respuesta del servidor');
         }
 
         localStorage.setItem('token', response.token);
         this.isLoggedIn = true;
         this.saveUserInformation();
-        console.log('userInformation:', this.userInformation);
+        //console.log('userInformation:', this.userInformation);
       })
     );
   }

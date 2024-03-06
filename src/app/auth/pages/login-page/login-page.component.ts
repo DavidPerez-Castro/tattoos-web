@@ -22,15 +22,15 @@ export class LoginPageComponent {
   login(): void {
     this.authService.login(this.user).subscribe(
       response => {
-        console.log('Inicio de sesión exitoso:', response);
-        console.log('Token:', response.token);
-        console.log('Nombre:', response.firstName);
+        //console.log('Inicio de sesión exitoso:', response);
+        //console.log('Token:', response.token);
+        //console.log('Nombre:', response.firstName);
         this.router.navigate(['/tatuajes/home']);
 
-        console.log('Usuario autenticado:', this.authService.isLoggedIn);
+        //console.log('Usuario autenticado:', this.authService.isLoggedIn);
       },
       error => {
-        console.error('Error:', error);
+        //console.error('Error:', error);
       }
     );
   }

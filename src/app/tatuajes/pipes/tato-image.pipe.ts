@@ -13,7 +13,7 @@ export class TatoImagePipe implements PipeTransform {
       return 'assets/no-image.png';
     }
 
-    if ( tato.imageUrl ) return tato.imageUrl; // https:///google.com/flash.png
+    if ( tato.imageUrl ) return tato.imageUrl;
 
     return `assets/tatuajes/${ tato._id }.jpg`;
 

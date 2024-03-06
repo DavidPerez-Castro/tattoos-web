@@ -22,11 +22,11 @@ export class RegisterPageComponent {
   register(){
     this.authService.register(this.user).subscribe(
       (response) => {
-        console.log('Registro exitoso', response);
+        //console.log('Registro exitoso', response);
         this.router.navigate(['/auth/login']);
       },
       (error) => {
-        console.error('Error en el registro', error);
+        //console.error('Error en el registro', error);
       }
     );
   }

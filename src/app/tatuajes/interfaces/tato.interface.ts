@@ -5,12 +5,19 @@ export interface Tato {
   title:       string;
   description: string;
   price:       number;
-  //style:       Style;
-  imageUrl?:      string;
+  details:     string;
+  size:        string;
+  color:       string;
+  style:       string;
+  bodyPart:    string;
+  imageUrl?:   string;
 }
 
-/*export enum Style {
-  Acuarela = "Acuarela",
-  EstiloMexicanoTradicional = "Estilo mexicano tradicional",
-  EstiloTradicionalBN = "Estilo tradicional b/n",
-}*/
+export interface Contact {
+  firstName:    string;
+  lastName:     string;
+  email:        string;
+  phoneNumber?: string;
+  matter:       string;
+  message:      string;
+}

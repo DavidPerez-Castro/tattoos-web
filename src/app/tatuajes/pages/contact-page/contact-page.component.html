@@ -1,36 +1,37 @@
 <section class="sec-contact max-w-full py-0 px-2 md:px-0 md:py-0 m-0 m-auto">
   <div class="form-contact flex flex-column justify-content-center align-items-center h-screen py-1 px-1 md:px-3 md:py-2">
     <h1 class="text-2xl">Contacto</h1>
-    <p class="text-lg">Por favor no dude en contactarnos si tiene preguntas o sugerencias.
-    </p>
+    <p class="text-lg">Por favor no dude en contactarnos si tiene preguntas o sugerencias.</p>
     <p class="text-lg">Completa el formulario con tus datos</p>
     <div class="form-field flex flex-column w-auto md:w-30rem">
       <mat-form-field>
         <mat-label>Nombre*</mat-label>
-        <input matInput>
+        <input matInput [(ngModel)]="contact.firstName">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Apellido*</mat-label>
+        <input matInput [(ngModel)]="contact.lastName">
       </mat-form-field>
       <mat-form-field>
         <mat-label>Correo electrónico</mat-label>
-        <input matInput placeholder="pat@example.com" [formControl]="email" required>
-        @if (email.invalid) {
-          <mat-error>{{getErrorMessage()}}</mat-error>
-        }
+        <input matInput [formControl]="email" required>
+        <mat-error *ngIf="!isEmailValid()">{{getErrorMessage()}}</mat-error>
       </mat-form-field>
       <mat-form-field>
         <mat-label>Número de teléfono</mat-label>
-        <input matInput>
+        <input matInput [(ngModel)]="contact.phoneNumber">
         <mat-icon matSuffix>phone</mat-icon>
         <mat-hint>Include area code</mat-hint>
       </mat-form-field>
       <mat-form-field>
         <mat-label>Asunto*</mat-label>
-        <input matInput>
+        <input matInput [(ngModel)]="contact.matter">
       </mat-form-field>
       <mat-form-field>
         <mat-label>Mensaje*</mat-label>
-        <textarea matInput></textarea>
+        <textarea matInput [(ngModel)]="contact.message"></textarea>
       </mat-form-field>
-      <button mat-fab extended color="primary">
+      <button mat-fab extended color="primary" (click)="sendEmail()" [disabled]="!isFormValid()">
         <mat-icon>send</mat-icon>
         Enviar
       </button>
