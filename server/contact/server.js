@@ -16,6 +16,8 @@ app.use(express.json());
 
 app.use('/api/contact', contactRoutes);
 
-app.listen(3001, () => {
+const PORT = process.env.PORT
+
+app.listen(PORT, () => {
   console.log('Server is running on port');
 });

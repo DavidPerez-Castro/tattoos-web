@@ -1,0 +1,5 @@
+services:
+  - name: contact
+    env: docker
+    buildCommand: docker build -t contact .
+    startCommand: docker run -p 3000:3001 contact
