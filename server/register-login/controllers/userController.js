@@ -29,3 +29,31 @@ exports.register = async (req, res) => {
     res.status(500).json({ message: 'Error en el servidor' });
   }
 };
+
+// Obtener todos los usuarios
+exports.getAllUsers = async (req, res) => {
+  try {
+    const users = await User.find({}, '-password'); // Excluir la contraseña de la respuesta
+    res.status(200).json(users);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Error en el servidor' });
+  }
+};
+
+// Obtener usuario por ID
+exports.getUserById = async (req, res) => {
+  try {
+    const userId = req.params.id;
+    const user = await User.findById(userId, '-password'); // Excluir la contraseña de la respuesta
+
+    if (!user) {
+      return res.status(404).json({ message: 'Usuario no encontrado' });
+    }
+
+    res.status(200).json(user);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Error en el servidor' });
+  }
+};

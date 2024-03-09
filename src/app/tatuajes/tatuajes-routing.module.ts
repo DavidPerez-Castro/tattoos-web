@@ -14,7 +14,7 @@ const routes: Routes = [
     path: '',
     component: LayoutPageComponent,
     children: [ //Rutas Hijas
-      { path: 'home', component: HomePageComponent},
+      { path: 'home', component: HomePageComponent },
       { path: 'about', component: AboutPageComponent },
       { path: 'contact', component: ContactPageComponent },
       { path: 'product', component: ProductPageComponent },

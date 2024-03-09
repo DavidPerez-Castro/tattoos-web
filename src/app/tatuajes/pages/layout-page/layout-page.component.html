@@ -21,7 +21,7 @@
   </mat-sidenav>
 
 
-  <mat-toolbar color="primary" class="h-5rem relative">
+  <mat-toolbar color="primary" class="h-5rem relative pr-6">
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
@@ -39,7 +39,7 @@
     </span>
     <span class="spacer"></span>
     <app-search class="mr-2"></app-search>
-
+    <span class="spacer2"></span>
     <button mat-button [matMenuTriggerFor]="menu" (click)="openUserMenu()" *ngIf="authService.isLoggedIn" class="mr-2">
       {{ userInformation.firstName }}
     </button>

@@ -66,4 +66,12 @@ export class AuthService {
     this.userInformation = {};
     this.saveUserInformation();
   }
+
+  getAllUsers(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiAuth}/users`);
+  }
+
+  getUserById(userId: string): Observable<any> {
+    return this.http.get<any>(`${this.apiAuth}/users/${userId}`);
+  }
 }

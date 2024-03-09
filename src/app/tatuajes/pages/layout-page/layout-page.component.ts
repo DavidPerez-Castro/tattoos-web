@@ -33,7 +33,7 @@ export class LayoutPageComponent implements OnInit {
     this.authService.logout();
     this.userInformation = {};
     this.showUserMenu = false;
-    console.log('Usuario desautenticado:', this.authService.isLoggedIn);
+    //console.log('Usuario desautenticado:', this.authService.isLoggedIn);
   }
 
 }

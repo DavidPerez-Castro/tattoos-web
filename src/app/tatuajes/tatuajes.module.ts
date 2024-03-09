@@ -18,7 +18,6 @@ import { CardImgComponent } from './components/card-img/card-img.component';
 import { FooterPageComponent } from './pages/footer-page/footer-page.component';
 import { SearchComponent } from './components/search/search.component';
 import { MenuuserComponent } from './user/menuuser/menuuser.component';
-import { PerfiluserComponent } from './user/perfiluser/perfiluser.component';
 
 @NgModule({
   imports: [
@@ -44,7 +43,6 @@ import { PerfiluserComponent } from './user/perfiluser/perfiluser.component';
     // Pipes
     TatoImagePipe,
       MenuuserComponent,
-      PerfiluserComponent,
   ],
 })
 export class TatuajesModule { }
