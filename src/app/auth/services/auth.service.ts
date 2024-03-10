@@ -8,7 +8,7 @@ import { tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiAuth = 'http://localhost:3000/api/auth';
+  private apiAuth = 'https://apiregisterlogin.onrender.com/api/auth';
   isLoggedIn = !!localStorage.getItem('token');
   userInformation: any = {};
 

@@ -6,7 +6,7 @@ import { Tato } from '../interfaces/tato.interface';
 import { environments } from '../../../environments/environments.prod';
 
 import { Contact } from '../interfaces/tato.interface';
-import {contact } from '../../../environments/environments'
+import {contact } from '../../../environments/environments.prod'
 
 @Injectable({providedIn: 'root'})
 export class TatuajesService {
