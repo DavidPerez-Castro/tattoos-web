@@ -1,0 +1,11 @@
+version: '3'
+services:
+  contact:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - DB_MONGO=mongodb+srv://david:david@cluster0.fc1tbhb.mongodb.net/meantattoos
